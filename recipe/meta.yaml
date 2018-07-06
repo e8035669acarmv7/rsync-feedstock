@@ -14,17 +14,18 @@ source:
     - 0001-removed-devices-test.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
-    - toolchain
     - perl 5.22.2.1
-    - zlib 1.2.11
+    - {{ compiler('c') }}
+  host:
+    - zlib
     - popt 1.16
   run:
-    - zlib 1.2.11
+    - zlib
     - popt 1.16
 
 test:
