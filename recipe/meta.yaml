@@ -7,7 +7,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://www.samba.org/ftp/{{ name }}/src/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
@@ -21,6 +20,7 @@ requirements:
   build:
     - perl
     - {{ compiler('c') }}
+    - make
   host:
     - zlib
     - popt 1.16
@@ -36,7 +36,7 @@ test:
 
 about:
   home: https://rsync.samba.org/
-  license: GPLv3
+  license: GPL-3.0-only
   license_family: GPL
   license_file: COPYING
   summary: 'Tool for fast incremental file transfer'
