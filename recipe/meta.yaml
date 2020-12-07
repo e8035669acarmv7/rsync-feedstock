@@ -25,6 +25,7 @@ build:
 requirements:
   build:
     - perl
+    - gnuconfig  # [unix]
     - {{ compiler('c') }}
     - make
   host:
@@ -36,8 +37,6 @@ requirements:
 
 test:
   commands:
-    - conda inspect linkages $PKG_NAME  # [not win]
-    - conda inspect objects $PKG_NAME  # [osx]
     - rsync --help
 
 about:
