@@ -19,7 +19,7 @@ source:
     sha256: 729711e8aa3228db4a3adea9ca5d60de184969a1537ac874477ce5676bee8464
 
 build:
-  number: 1002
+  number: 1003
   skip: True  # [win]
 
 requirements:
@@ -29,11 +29,9 @@ requirements:
     - {{ compiler('c') }}
     - make
   host:
-    - zlib
+    - libiconv
     - popt 1.16
-  run:
     - zlib
-    - popt 1.16
 
 test:
   commands:
