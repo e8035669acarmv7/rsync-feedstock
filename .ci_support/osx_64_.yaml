@@ -10,14 +10,18 @@ channel_targets:
 - conda-forge main
 libiconv:
 - '1.16'
+lz4_c:
+- 1.9.2
 macos_machine:
 - x86_64-apple-darwin13.4.0
-perl:
-- 5.26.2
+openssl:
+- 1.1.1
 pin_run_as_build:
   libiconv:
     max_pin: x.x
-  perl:
+  lz4-c:
+    max_pin: x.x.x
+  openssl:
     max_pin: x.x.x
   zlib:
     max_pin: x.x
@@ -25,3 +29,5 @@ target_platform:
 - osx-64
 zlib:
 - '1.2'
+zstd:
+- '1.4'
