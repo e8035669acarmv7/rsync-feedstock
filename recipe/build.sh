@@ -1,17 +1,14 @@
 #!/bin/sh
-# Get an updated config.sub and config.guess
-cp $BUILD_PREFIX/share/gnuconfig/config.* .
 
 set -e -o pipefail
 
-# If platform detection fails, these should be updated in the meta.yaml from:
-# http://git.savannah.gnu.org/gitweb/?p=config.git&view=view+git+repository
-mv config-updated.guess config.guess
-mv config-updated.sub config.sub
+# Get an updated config.sub and config.guess
+cp $BUILD_PREFIX/share/gnuconfig/config.* .
+
 
 ./configure --prefix=$PREFIX --without-included-zlib --without-included-popt
-make
+make -j${CPU_COUNT}
 if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
-make check
+    make check
 fi
 make install
