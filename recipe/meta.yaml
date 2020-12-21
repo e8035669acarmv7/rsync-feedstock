@@ -21,8 +21,12 @@ requirements:
     - make
   host:
     - libiconv
+    - lz4-c
+    - openssl
     - popt 1.16
+    - xxhash
     - zlib
+    - zstd
 
 test:
   commands:
