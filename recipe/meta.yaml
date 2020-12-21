@@ -15,7 +15,7 @@ build:
 
 requirements:
   build:
-    - perl
+    - perl *
     - gnuconfig  # [unix]
     - {{ compiler('c') }}
     - make
