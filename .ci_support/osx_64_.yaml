@@ -11,7 +11,7 @@ channel_targets:
 libiconv:
 - '1.16'
 lz4_c:
-- 1.9.2
+- 1.9.3
 macos_machine:
 - x86_64-apple-darwin13.4.0
 openssl:
