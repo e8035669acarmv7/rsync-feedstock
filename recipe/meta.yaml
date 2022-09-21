@@ -28,7 +28,6 @@ requirements:
     - xxhash
     - zlib
     - zstd
-    - coreutils  # [osx]
 
 test:
   commands:
