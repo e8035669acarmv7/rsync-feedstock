@@ -2,6 +2,10 @@ c_compiler:
 - gcc
 c_compiler_version:
 - '12'
+c_stdlib:
+- sysroot
+c_stdlib_version:
+- '2.17'
 cdt_name:
 - cos7
 cdt_arch:
@@ -20,6 +24,9 @@ openssl:
 - '3'
 target_platform:
 - linux-armv7l
+zip_keys:
+- - c_stdlib_version
+  - cdt_name
 zlib:
 - '1.2'
 zstd:
